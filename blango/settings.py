@@ -56,6 +56,7 @@ class Dev(Configuration):
       "debug_toolbar",
   ]
 
+
   MIDDLEWARE = [
       "debug_toolbar.middleware.DebugToolbarMiddleware",
       'django.middleware.security.SecurityMiddleware',
@@ -70,6 +71,10 @@ class Dev(Configuration):
   ROOT_URLCONF = 'blango.urls'
 
   INTERNAL_IPS = ["192.168.10.226"]
+
+  EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+  ACCOUNT_ACTIVATION_DAYS = 7
 
   TEMPLATES = [
       {
