@@ -24,7 +24,7 @@ from blango_auth.forms import BlangoRegistrationForm
 
 
 urlpatterns = [
-    path("api/v1/", include("blog.api_urls")),
+    path("api/v1/", include("blog.api.urls")),
     path("", blog.views.index),
         path("post/<slug>/", blog.views.post_detail, name="blog-post-detail"),
     path('admin/', admin.site.urls),
